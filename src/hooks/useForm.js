@@ -4,6 +4,13 @@ export const useForm = ( initialState = {}) => {
 
     // menejar el estado de nuestro formulario
     const [values, setValues] = useState(initialState);
+    
+
+    // Limpieza de input
+    const reset = () => {
+        setValues(initialState);
+    }
+
 
     const handleInputChange = ({ target }) => {
         setValues({
@@ -13,7 +20,7 @@ export const useForm = ( initialState = {}) => {
     }
 
 
-    return [ values, handleInputChange ];
+    return [ values, handleInputChange, reset ];
 }
 
 
