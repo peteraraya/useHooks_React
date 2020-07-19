@@ -1,7 +1,5 @@
 import React, { useReducer, useEffect } from 'react';
 import { todoReducer } from './todoReducer';
-import { useForm } from '../../hooks/useForm';
-
 import './style.css';
 import { TodoList } from './TodoList';
 import { TodoAdd } from './TodoAdd';
@@ -65,9 +63,9 @@ export const TodoApp = () => {
 
     }
 
-    const handleToogle = ( todoId ) =>{
+    const handleToggle = ( todoId ) =>{
         dispatch({
-            type:'toogle',
+            type:'toggle',
             payload: todoId
         });
     }
@@ -83,7 +81,7 @@ export const TodoApp = () => {
 
     return (
         <div>
-            <h1>Todo App ( {todos.length} ) </h1>
+            <h1>TodoApp ({todos.length}) </h1>
             <hr />
             <div className="row">
 
@@ -93,7 +91,7 @@ export const TodoApp = () => {
                         // proptypes
                         todos={ todos }
                         handleDelete = { handleDelete }
-                        handleToogle = { handleToogle }
+                        handleToggle = { handleToggle }
                    />
                 </div>
                 <div className="col-5">

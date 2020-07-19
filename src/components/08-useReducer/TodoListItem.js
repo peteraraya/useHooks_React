@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const TodoListItem = ( { todo, index, handleDelete, handleToogle }) => {
+export const TodoListItem = ( { todo, index, handleDelete, handleToggle }) => {
     return (
         <li
             key={todo.id}
@@ -8,9 +8,9 @@ export const TodoListItem = ( { todo, index, handleDelete, handleToogle }) => {
         >
             <p
                 className={`${ todo.done && 'complete' }`}
-                onClick={() => handleToogle( todo.id )}
+                onClick={() => handleToggle( todo.id )}
             >
-                { index + 1 }.  { todo.desc }
+                { index + 1 }. { todo.desc }
             </p>
 
             <button

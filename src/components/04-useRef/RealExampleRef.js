@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { MultipleCuistomHooks } from '../03-examples/MultipleCuistomHooks';
+import { MultipleCustomHooks } from '../03-examples/MultipleCustomHooks';
 
 import './effects.css';
 
@@ -16,7 +16,7 @@ export const RealExampleRef = () => {
             <h1>RealExampleRef</h1>
             <hr />
 
-            { show && <MultipleCuistomHooks /> }
+            {show && <MultipleCustomHooks /> }
 
             <button
                 className="btn btn-primary mt-5"

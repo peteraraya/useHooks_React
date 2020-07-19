@@ -5,7 +5,7 @@ export const AboutScreen = () => {
     const { user, setUser } = useContext(UserContext);
 
     const handleClick = () => {
-        setUser({});
+        setUser({}); // purga información - notifica a todos los hijos que hubo cambios
     }
 
     return (
